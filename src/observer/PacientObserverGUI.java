@@ -20,7 +20,8 @@ public class PacientObserverGUI extends JFrame implements Observer{
 	/**
 	 * Create the frame.
 	 */
-	public PacientObserverGUI() {
+	public PacientObserverGUI(Observable obs) {
+		obs.addObserver(this);
 		setTitle("Pacient symptoms");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(650, 100, 200, 300);
